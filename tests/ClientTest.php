@@ -1,16 +1,16 @@
 <?php
 
-namespace Spatie\Dropbox\Test;
+namespace BCJTI\Dropbox\Test;
 
-use Spatie\Dropbox\Client;
+use BCJTI\Dropbox\Client;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\StreamInterface;
 use GuzzleHttp\Client as GuzzleClient;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Spatie\Dropbox\UploadSessionCursor;
+use BCJTI\Dropbox\UploadSessionCursor;
 use GuzzleHttp\Exception\ClientException;
-use Spatie\Dropbox\Exceptions\BadRequest;
+use BCJTI\Dropbox\Exceptions\BadRequest;
 
 class ClientTest extends TestCase
 {
@@ -789,7 +789,7 @@ class ClientTest extends TestCase
 
     protected static function getMethod($name)
     {
-        $class = new \ReflectionClass('Spatie\Dropbox\Client');
+        $class = new \ReflectionClass('BCJTI\Dropbox\Client');
         $method = $class->getMethod($name);
         $method->setAccessible(true);
 
