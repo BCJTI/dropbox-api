@@ -644,13 +644,24 @@ class Client
         return $this;
     }
 
+
     /**
      * Get the HTTP headers.
      */
     protected function getHeaders(array $headers = []): array
     {
+
+
         return array_merge([
             'Authorization' => "Bearer {$this->accessToken}",
-        ], $headers);
+        ], $headers, $this->headers);
+    }
+
+    /**
+     * Set the HTTP headers. Dropbox Business needs other tags in headers
+     */
+    public function setHeaders(array $headers = [])
+    {
+        $this->headers = $headers;
     }
 }
